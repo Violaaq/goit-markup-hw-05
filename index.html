@@ -51,7 +51,7 @@
       <section class="first-section">
         <div class="first-container container">
           <h1 class="section-tittle">Effective Solutions for Your Business</h1>
-          <button type="button" class="button">Order Service</button>
+          <button type="button" class="button" data-modal-open>Order Service</button>
         </div>
       </section>
       <section class="second-section">
@@ -441,5 +441,13 @@
       </div>
       </div>
     </footer>
+
+    <div class="backdrop-is-hidden" data-modal>
+<div class="modal">
+  <button type="button" class="close-btn" data-modal-close>X</button>
+  <h2>I am modal window</h2>
+</div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

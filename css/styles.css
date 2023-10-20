@@ -14,6 +14,9 @@
   --color-footer: #f4f4fd;
   --color-border-button: #e7e9fc;
   --light-slate: #8e8f99;
+
+  --tr-fn: cubic-bezier(0.4, 0, 0.2, 1);
+  --tr-drn: 250ms;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -94,6 +97,18 @@ img {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--color-button-on);
+}
+
+.nav-link::after {
+  content: "___";
+  color: green;
+}
+.nav-link::after {
+  display: none;
+  margin-bottom: 20px;
+}
+.nav-link:hover::after {
+  display: block;
 }
 
 .address {
@@ -536,4 +551,73 @@ img {
 .portfolio-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-link:hover figcaption {
+  translate: 0;
+}
+.casch-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.casch-img-wrapper figcaption {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-button);
+  translate: 0 100%;
+  transition: translate var(--tr-drn) var(--tr-fn);
+}
+.figc-text {
+  color: var(--color-footer);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+  padding: 40px 32px 164px 32px;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  pointer-events: all;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition-property: opacity;
+  transition-duration: var(--tr-drn);
+  transition-timing-function: var(--tr-fn);
+}
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #e7e9fc;
+  border-radius: 50%;
+  border: 1px solid #e7e9fc;
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: firebrick;
+  width: 408px;
+  min-height: 584px;
+  border-radius: 4px;
+  background: var(--DAIRY, #fcfcfc);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transform: transicion;
 }

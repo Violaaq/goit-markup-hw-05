@@ -629,15 +629,6 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.x-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.x-icon:hover,
-.x-icon:focus {
-  fill: #ffffff;
-}
-
 .close-btn {
   position: absolute;
   top: 24px;
@@ -659,5 +650,15 @@ img {
 .close-btn:focus {
   background-color: #404bbf;
   border: none;
+  fill: #ffffff;
+}
+
+.x-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: currentColor;
+}
+
+.x-icon:hover,
+.x-icon:focus {
   fill: #ffffff;
 }

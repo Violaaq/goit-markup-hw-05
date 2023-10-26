@@ -85,6 +85,7 @@ img {
 }
 
 .nav-link {
+  display: inline-block;
   color: var(--color-header);
   font-size: 16px;
   font-weight: 500;
@@ -568,7 +569,7 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.portfolio-link:hover p {
+.portfolio-link:hover p .portfolio-link:active {
   translate: 0;
 }
 .casch-img-wrapper {
